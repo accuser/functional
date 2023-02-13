@@ -1,0 +1,39 @@
+{
+	"name": "@accuser/functional",
+	"version": "0.1.0",
+	"description": "A library for functional JavaScript / TypeScript.",
+	"main": "lib/index.js",
+	"type": "module",
+	"scripts": {
+		"build": "pnpm clean && tsc --project tsconfig.build.json",
+		"clean": "rm -Rf ./lib",
+		"test": "vitest"
+	},
+	"keywords": [
+		"functional JavaScript",
+		"functional TypeScript",
+		"compose",
+		"maybe",
+		"not",
+		"nothing",
+		"once",
+		"pipeline",
+		"something",
+		"tap",
+		"unary"
+	],
+	"author": "Matthew Gibbons <mhgibbons@me.com>",
+	"license": "MIT",
+	"devDependencies": {
+		"@tsconfig/node-lts-strictest-esm": "^18.12.1",
+		"@types/node": "^18.13.0",
+		"@typescript-eslint/eslint-plugin": "^5.51.0",
+		"@typescript-eslint/parser": "^5.51.0",
+		"eslint": "^8.33.0",
+		"eslint-config-prettier": "^8.6.0",
+		"prettier": "^2.8.4",
+		"typescript": "^4.9.5",
+		"typescript-eslint": "0.0.1-alpha.0",
+		"vitest": "^0.28.4"
+	}
+}
