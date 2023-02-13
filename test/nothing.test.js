@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import not from '../src/not';
 import nothing from '../src/nothing';
+import { isFalse, isTrue } from './helpers';
 
 describe('nothing()', () => {
 	it('is a function', () => {
@@ -15,7 +15,7 @@ describe('nothing()', () => {
 		it('returns true', () => {
 			const values = [null, undefined].map(nothing);
 
-			expect(values.every(Boolean)).toBe(true);
+			expect(values.every(isTrue)).toBe(true);
 		});
 	});
 
@@ -23,7 +23,7 @@ describe('nothing()', () => {
 		it('returns false', () => {
 			const values = [0, 0.0, '', false].map(nothing);
 
-			expect(values.every(not(Boolean))).toBe(true);
+			expect(values.every(isFalse)).toBe(true);
 		});
 	});
 });
